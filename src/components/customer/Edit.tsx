@@ -27,6 +27,8 @@ class EditCustomer extends React.Component<RouteComponentProps<any>, IFormState>
 
   public componentDidMount(): void {
     axios.get(`http://localhost:5000/customers/${this.state.id}`).then(data => {
+      console.log
+      ('data', data);
         this.setState({ customer: data.data });
     })
   }
